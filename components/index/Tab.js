@@ -2,11 +2,11 @@
 import React,{
   TabBarIOS,Component,Image
 } from 'react-native';
+import TabNavigator from 'react-native-tab-navigator';
+var Item = TabNavigator.Item;
 
-var Item = TabBarIOS.Item;
-
-var School = require('../modules/School');
-var Shop = require('../modules/Shop');
+var School = require('../modules/school/School');
+var Shop = require('../modules/shop/Shop');
 var Job = require('../modules/Job');
 var Snack = require('../modules/Snack');
 var Me = require('../modules/me/Me');
@@ -41,10 +41,10 @@ class Tab extends Component{
   _renderItem(item){
       switch (this.state.selectedKey) {
         case 0:
-          return <School item={item}/>;
+          return <School item={item} route={this.props.route} navigator={this.props.navigator}/>;
           break;
         case 1:
-          return <Shop item={item}/>;
+          return <Shop item={item} route={this.props.route} navigator={this.props.navigator}/>;
           break;
         case 2:
           return <Job item={item}/>;
@@ -62,12 +62,16 @@ class Tab extends Component{
     let data = this.state.data;
     // console.log(data);
     return (
-      <TabBarIOS>
+      <TabNavigator tabBarStyle={{height:48}}>
         {
           data.map(
           (item,index) => {
           return (
             <Item
+              renderIcon={()=><Image source={{uri:item.icon[0]}} style={{height:25,width:25}}/>}
+              renderSelectedIcon={()=><Image source={{uri:item.icon[1]}} style={{height:25,width:25}}/>}
+              titleStyle={{color:item.font.color[0]}}
+              selectedTitleStyle={{color:item.font.color[1]}}
               title={item.text}
               key={index}
               selected={this.state.selectedKey === index}
@@ -79,7 +83,7 @@ class Tab extends Component{
           )
         })
       }
-      </TabBarIOS>
+      </TabNavigator>
     )
 }
 }

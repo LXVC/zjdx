@@ -13,8 +13,10 @@ class Job extends Component{
 
   render() {
     return (
-      <View style={{marginTop:20}}>
-        <WebView source={{uri:this.props.item.url}}/>
+      <View style={{flex:1,marginTop:20}}>
+        <WebView
+          source={{uri:this.props.item.url}}
+          contentInset={{top:-20}}/>
       </View>
     )
   }

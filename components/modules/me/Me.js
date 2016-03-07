@@ -9,7 +9,7 @@ var Setting = require('./Setting');
 
 const url = 'http://api.dev.yszjdx.com/app/user/ios'
 
-class _Me extends Component{
+class Me extends Component{
 
   constructor(props) {
     super(props);
@@ -159,22 +159,5 @@ const styles = StyleSheet.create({
   }
 })
 
-class Me extends Component{
-  constructor(props) {
-    super(props);
-    // console.log(this.props);
-  }
-  renderSceneConfig(route,navigator){
-    return <route.component route={route} navigator={navigator}/>
-  }
-  render(){
-    return (
-      <Navigator
-        initialRoute={{component:_Me,item:this.props.item}}
-        renderScene={this.renderSceneConfig}/>
-  )
-  }
 
-}
-
-module.exports = _Me;
+module.exports = Me;

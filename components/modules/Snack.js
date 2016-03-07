@@ -13,7 +13,9 @@ class Snack extends Component{
   render() {
     return (
       <View style={{flex:1}}>
-        <WebView source={{uri:this.props.item.url}}/>
+        <WebView
+          source={{uri:this.props.item.url}}
+          />
       </View>
     )
   }

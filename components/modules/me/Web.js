@@ -9,13 +9,10 @@ import NavBar from 'react-native-navbar';
 
 const injectScript =
   `
-  function trim(str){
-    return str.replace(/\s|\xA0/g,"");
-  }//去title里面的空格
   if(WebViewBridge){
     var Youjia = new Object();
     var title = document.getElementsByTagName('title')[0].innerText;
-    WebViewBridge.send(trim(title))
+    WebViewBridge.send(title)
     Youjia.pushUrl = function(url){
         WebViewBridge.send(url);
     }
@@ -25,8 +22,6 @@ class Web extends Component{
 
   constructor(props) {
     super(props);
-    console.log(1);
-    console.log(this.props);
     this.state = {
       load : 0,
       url : this.props.url,
@@ -35,8 +30,6 @@ class Web extends Component{
   }
 
   _onBridgeMessage(message){
-    console.log('message1');
-    console.log(message);
       if (message.startsWith('http')) {
         this.props.navigator.push({
           component : Web,
@@ -45,7 +38,14 @@ class Web extends Component{
           }
         })
       }else {
-        this.setState({title:message})
+        var title = '';
+        let titles = message.split(' ');
+        for(let i in titles){
+          if(titles[i].length>=2){
+            title = titles[i].replace('\n','');
+          }
+        };
+        this.setState({title:title})
       }
   }
 
