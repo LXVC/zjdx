@@ -15,8 +15,7 @@ class Job extends Component{
     return (
       <View style={{flex:1,marginTop:20}}>
         <WebView
-          source={{uri:this.props.item.url}}
-          contentInset={{top:-20}}/>
+          source={{uri:this.props.item.url}}/>
       </View>
     )
   }

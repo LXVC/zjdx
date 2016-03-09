@@ -15,7 +15,7 @@ class Snack extends Component{
       <View style={{flex:1}}>
         <WebView
           source={{uri:this.props.item.url}}
-          />
+          contentInset={{top:20}}/>
       </View>
     )
   }

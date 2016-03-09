@@ -80,7 +80,7 @@ class School extends Component{
     }
     let module = this.state.module;
     return (
-      <View style={{flex:1,backgroundColor:'#fe5ea9'}}>
+      <View style={{flex:1,backgroundColor:'#ddd'}}>
         <NavBar
           title={{title:this.props.item.text}}
           rightButton={rightButton}/>
@@ -160,12 +160,12 @@ var styles = StyleSheet.create({
     marginLeft : 10,
     marginRight :10,
     marginBottom : 55,
-    backgroundColor :'#413f53'
+    // backgroundColor :'#413f53'
   },
   first : {
     flexDirection : 'row',
     height : (Width-25)/2,
-    backgroundColor : '#664922',
+    // backgroundColor : '#664922',
     marginBottom:5
   },
   center : {
@@ -185,7 +185,7 @@ var styles = StyleSheet.create({
   second : {
     flexDirection : 'row',
     marginBottom : 5,
-    height :(Width-25)/3.1
+    height :(Width-25)/3.5
   },
   secondItem : {
     flex : 1,

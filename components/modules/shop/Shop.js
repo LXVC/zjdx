@@ -4,6 +4,7 @@ import React,{
 } from 'react-native';
 
 import WebViewBridge from 'react-native-webview-bridge';
+import Web from '../me/Web';
 // import Camera from 'react-native-camera';
 // import QRCodeScreen from './QRCodeScreen';
 
@@ -11,7 +12,10 @@ var injectScript = `
 var Youjia = new Object();
 Youjia.scanQRCode = function(){
     WebViewBridge.send('open');
-}
+};
+Youjia.pushUrl = function(url){
+    WebViewBridge.send(url);
+};
 var is_app = "undefined" != typeof Youjia;
 `
 
@@ -23,10 +27,16 @@ class Shop extends Component{
   }
 
   _onBridgeMessage(message){
-      if (message === 'open') {
+      if (message.startsWith('http')) {
         this.props.navigator.push({
-          component : QRCodeScreen
+          component : Web,
+          params : {
+            url : message
+          }
         })
+      }
+      if (message === 'open') {
+        console.log(message);
       }
   }
 
@@ -35,7 +45,6 @@ class Shop extends Component{
       <View style={{flex:1,marginTop:20}}>
         <WebViewBridge
           url={this.props.item.url}
-          contentInset={{top:-20}}
           onBridgeMessage={this._onBridgeMessage.bind(this)}
           injectedJavaScript={injectScript}/>
       </View>
