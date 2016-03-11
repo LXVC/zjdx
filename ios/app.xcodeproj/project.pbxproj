@@ -22,6 +22,14 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		55481CDB1C8D2BF2004BB253 /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55481CD01C8D2BCF004BB253 /* libRCTCamera.a */; };
+		55CC4D101C927BA900384D9C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CC4D0F1C927BA900384D9C /* CFNetwork.framework */; };
+		55CC4D121C927BB700384D9C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CC4D111C927BB700384D9C /* SystemConfiguration.framework */; };
+		55CC4D141C927BC400384D9C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CC4D131C927BC400384D9C /* CoreTelephony.framework */; };
+		55CC4D1C1C927D1D00384D9C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CC4D171C927C3600384D9C /* Security.framework */; };
+		55CC4D241C92B02000384D9C /* libXG-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CC4D201C92B02000384D9C /* libXG-SDK.a */; };
+		55CC4D251C92B02000384D9C /* ReleaseNotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55CC4D211C92B02000384D9C /* ReleaseNotes.txt */; };
+		55CC4D281C92B08600384D9C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CC4D271C92B08600384D9C /* libz.tbd */; };
+		55CC4D2A1C92B0A100384D9C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CC4D291C92B0A100384D9C /* libsqlite3.tbd */; };
 		55E407E01C8A748B001A307F /* libReact-Native-Webview-Bridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E407DE1C8A747F001A307F /* libReact-Native-Webview-Bridge.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
@@ -141,6 +149,16 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = app/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		55481CCA1C8D2BCF004BB253 /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
+		55CC4D0F1C927BA900384D9C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		55CC4D111C927BB700384D9C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		55CC4D131C927BC400384D9C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		55CC4D171C927C3600384D9C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		55CC4D201C92B02000384D9C /* libXG-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libXG-SDK.a"; sourceTree = "<group>"; };
+		55CC4D211C92B02000384D9C /* ReleaseNotes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReleaseNotes.txt; sourceTree = "<group>"; };
+		55CC4D221C92B02000384D9C /* XGPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGPush.h; sourceTree = "<group>"; };
+		55CC4D231C92B02000384D9C /* XGSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGSetting.h; sourceTree = "<group>"; };
+		55CC4D271C92B08600384D9C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		55CC4D291C92B0A100384D9C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		55E407D01C8A747F001A307F /* React-Native-Webview-Bridge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "React-Native-Webview-Bridge.xcodeproj"; path = "../node_modules/react-native-webview-bridge/ios/React-Native-Webview-Bridge.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -158,6 +176,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CC4D2A1C92B0A100384D9C /* libsqlite3.tbd in Frameworks */,
+				55CC4D281C92B08600384D9C /* libz.tbd in Frameworks */,
+				55CC4D1C1C927D1D00384D9C /* Security.framework in Frameworks */,
+				55CC4D141C927BC400384D9C /* CoreTelephony.framework in Frameworks */,
+				55CC4D121C927BB700384D9C /* SystemConfiguration.framework in Frameworks */,
+				55CC4D101C927BA900384D9C /* CFNetwork.framework in Frameworks */,
 				55481CDB1C8D2BF2004BB253 /* libRCTCamera.a in Frameworks */,
 				55E407E01C8A748B001A307F /* libReact-Native-Webview-Bridge.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -170,6 +194,7 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				55CC4D241C92B02000384D9C /* libXG-SDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +304,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		55CC4D1F1C92B02000384D9C /* XG-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				55CC4D201C92B02000384D9C /* libXG-SDK.a */,
+				55CC4D211C92B02000384D9C /* ReleaseNotes.txt */,
+				55CC4D221C92B02000384D9C /* XGPush.h */,
+				55CC4D231C92B02000384D9C /* XGSetting.h */,
+			);
+			path = "XG-SDK";
+			sourceTree = "<group>";
+		};
 		55E407D11C8A747F001A307F /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +361,13 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				55CC4D291C92B0A100384D9C /* libsqlite3.tbd */,
+				55CC4D271C92B08600384D9C /* libz.tbd */,
+				55CC4D1F1C92B02000384D9C /* XG-SDK */,
+				55CC4D171C927C3600384D9C /* Security.framework */,
+				55CC4D131C927BC400384D9C /* CoreTelephony.framework */,
+				55CC4D111C927BB700384D9C /* SystemConfiguration.framework */,
+				55CC4D0F1C927BA900384D9C /* CFNetwork.framework */,
 				13B07FAE1A68108700A75B9A /* app */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* appTests */,
@@ -394,6 +437,17 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = JG6P34L9X8;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -565,6 +619,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CC4D251C92B02000384D9C /* ReleaseNotes.txt in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
@@ -671,6 +726,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEAD_CODE_STRIPPING = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -678,9 +735,16 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
 				INFOPLIST_FILE = app/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XG-SDK",
+				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.zjdx;
 				PRODUCT_NAME = app;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -688,15 +752,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
 				INFOPLIST_FILE = app/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XG-SDK",
+				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.zjdx;
 				PRODUCT_NAME = app;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

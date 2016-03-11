@@ -11,11 +11,21 @@
 
 #import "RCTRootView.h"
 
+#import "XGPush.h"
+
+#import "XGSetting.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   NSURL *jsCodeLocation;
+     [XGPush startApp:2200186490 appKey:@"IDWJ1Z3A555L"];
+     // iOS 8 Notifications
+    [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+    
+    [application registerForRemoteNotifications];
+
 
   /**
    * Loading JavaScript code - uncomment the one you want.
@@ -54,4 +64,17 @@
   return YES;
 }
 
+
+-(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+  NSLog(@"%s,%@",__FUNCTION__,error);
+}
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+  NSLog(@"Push Info:%@",userInfo);
+}
+
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+  NSString * deviceTokenStr = [XGPush registerDevice:deviceToken];
+  NSLog(deviceTokenStr);
+}
 @end

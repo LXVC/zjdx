@@ -7,6 +7,7 @@ var NavBar = require('react-native-navbar');
 var Web = require('./Web');
 var Setting = require('./Setting');
 var Message = require('./Message');
+var Feedback = require('./Feedback')
 
 const url = 'http://api.dev.yszjdx.com/app/user/ios'
 
@@ -57,8 +58,11 @@ class Me extends Component{
 
   optionsOnClick(option){
       switch (option) {
-        case 'message':
-              this.props.navigator.push({component:Message});
+        case 'Message':
+          this.props.navigator.push({component:Message});
+          break;
+        case 'Feedback':
+          this.props.navigator.push({component:Feedback});
           break;
       }
   }
@@ -127,14 +131,14 @@ class Me extends Component{
           {this.rendeListMenu()}
         </View>
         <View style={[styles.list_menu,{marginTop:-130}]}>
-          <TouchableHighlight onPress={()=>this.optionsOnClick('message')}>
+          <TouchableHighlight onPress={()=>this.optionsOnClick('Message')}>
             <View style={styles.list_menu_item}>
                 <Text style={{flex:1,paddingLeft :20}}>
                   消息中心
                 </Text>
             </View>
           </TouchableHighlight>
-          <TouchableHighlight>
+          <TouchableHighlight onPress={()=>this.optionsOnClick('Feedback')}>
             <View style={styles.list_menu_item}>
                 <Text style={{flex:1,paddingLeft :20}}>
                   问题反馈
