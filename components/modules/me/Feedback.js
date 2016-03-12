@@ -12,6 +12,7 @@ class Feedback extends Component{
 
   constructor(props) {
     super(props)
+
   }
 
   render(){
@@ -27,7 +28,8 @@ class Feedback extends Component{
             <TextInput style={styles.input}
               placeholder="请输入文字..."
               multiline={true}
-              autoCapitalize="none"/>
+              autoCapitalize="none"
+              selectionColor="blue"/>
           </View>
         </View>
     )

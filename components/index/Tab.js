@@ -7,8 +7,8 @@ var Item = TabNavigator.Item;
 
 var School = require('../modules/school/School');
 var Shop = require('../modules/shop/Shop');
-var Job = require('../modules/Job');
-var Snack = require('../modules/Snack');
+var Job = require('../modules/job/Job');
+var Snack = require('../modules/snack/Snack');
 var Me = require('../modules/me/Me');
 
 
@@ -47,10 +47,10 @@ class Tab extends Component{
           return <Shop item={item} route={this.props.route} navigator={this.props.navigator}/>;
           break;
         case 2:
-          return <Job item={item}/>;
+          return <Job item={item} route={this.props.route} navigator={this.props.navigator}/>;
           break;
         case 3:
-          return <Snack item={item}/>;
+          return <Snack item={item} route={this.props.route} navigator={this.props.navigator}/>;
           break;
         case 4:
           return <Me item={item} route={this.props.route} navigator={this.props.navigator}/>;

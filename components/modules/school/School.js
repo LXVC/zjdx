@@ -1,13 +1,15 @@
 'use strict'
 import React,{
   View,Text,Component,StyleSheet,Image,
-  TouchableHighlight,Dimensions,TouchableOpacity
+  TouchableHighlight,Dimensions,TouchableOpacity,WebView
 } from 'react-native';
 
 const Width = Dimensions.get('window').width;
 var NavBar = require('react-native-navbar');
 var Swiper = require('react-native-swiper');
-import Setting from '../me/Setting'
+import Setting from '../me/Setting';
+import Web from '../me/Web';
+import SchoolWeb from './SchoolWeb';
 
 var url ='http://api.dev.yszjdx.com/app/campus';
 
@@ -44,12 +46,23 @@ class School extends Component{
     return this.state.banner.map(
       (item,index)=>{
         return (
-          <TouchableHighlight key={index}>
+          <TouchableHighlight key={index} onPress={()=>this._urlOnClick(item)}>
             <Image source={{uri:item.pic}} style={styles.swiperItem}/>
           </TouchableHighlight>
         )
       }
     )
+  }
+
+  _urlOnClick(item){
+    // alert(Object.keys(item))
+    this.props.navigator.push({
+      component : SchoolWeb,
+      params : {
+        url : item.url,
+        title : item.title
+      }
+    })
   }
 
   _renderSecond(){
@@ -75,7 +88,10 @@ class School extends Component{
     let rightButton = {
       title: '设置',
       handler: ()=>this.props.navigator.push({
-        component : Setting
+        component : Setting,
+        params : {
+          changeLoginState : this.props.route.changeLoginState
+        }
       })
     }
     let module = this.state.module;
@@ -84,7 +100,7 @@ class School extends Component{
         <NavBar
           title={{title:this.props.item.text}}
           rightButton={rightButton}/>
-        <Swiper height={165}>
+        <Swiper height={130}>
             {this._renderSwiper()}
         </Swiper>
 
@@ -151,7 +167,7 @@ class School extends Component{
 
 var styles = StyleSheet.create({
   swiperItem : {
-    height : 150,
+    height : 120,
     width : Width
   },
   main : {

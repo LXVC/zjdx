@@ -5,8 +5,7 @@ import React,{
 
 import WebViewBridge from 'react-native-webview-bridge';
 import Web from '../me/Web';
-// import Camera from 'react-native-camera';
-// import QRCodeScreen from './QRCodeScreen';
+import ScanQRCode from './ScanQRCode'
 
 var injectScript = `
 var Youjia = new Object();
@@ -36,7 +35,9 @@ class Shop extends Component{
         })
       }
       if (message === 'open') {
-        console.log(message);
+        this.props.navigator.push({
+          component : ScanQRCode
+        })
       }
   }
 

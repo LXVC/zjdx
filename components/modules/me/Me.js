@@ -15,7 +15,7 @@ class Me extends Component{
 
   constructor(props) {
     super(props);
-    // console.log(this.props);
+    console.log(this.props.route.changeLoginState);
     this.state = {
       auth_btn : {},
       list_menu : [],
@@ -104,14 +104,16 @@ class Me extends Component{
 
   render() {
     if (!this.state.dataIsWell) {
-      // console.log(this.state);
       return <View/>
     }
 
     let rightButton = {
       title : '设置',
       handler : ()=>this.props.navigator.push({
-          component : Setting
+        component : Setting,
+        params : {
+          changeLoginState : this.props.route.changeLoginState
+        }
       })
     }
     return (
@@ -130,7 +132,7 @@ class Me extends Component{
         <View style={styles.list_menu}>
           {this.rendeListMenu()}
         </View>
-        <View style={[styles.list_menu,{marginTop:-130}]}>
+        <View style={[styles.list_menu,{marginTop:-30}]}>
           <TouchableHighlight onPress={()=>this.optionsOnClick('Message')}>
             <View style={styles.list_menu_item}>
                 <Text style={{flex:1,paddingLeft :20}}>
